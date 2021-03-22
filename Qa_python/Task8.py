@@ -30,7 +30,7 @@ class ATM:
                 attempts += 1
                 self.pin_code = input('Enter Pin-code again: ')
                 if self.pin_code == pin_codes[self.first_name]:
-                    print('Correctly PIN-code')
+                    print('Correctly PIN-code!')
                     break
                 if attempts > 1:
                     print('Your card is blocked')
