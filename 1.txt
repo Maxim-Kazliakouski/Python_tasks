@@ -1,0 +1,3 @@
+The first string!
+It is a second string!
+This string got number 3!
