@@ -1,10 +1,12 @@
 import time
-
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-# установка Driver Manager для Chrome
+# # установка Driver Manager для Chrome
+# driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver = webdriver.Chrome(ChromeDriverManager().install())
+
 # после выполнения какого-либо действия драйвер ждёт 5 секунд появления интересующего нас элемента
 driver.implicitly_wait(5)
 # наш искомый URL, который будет отображаться при открытии браузера
@@ -28,4 +30,5 @@ for element in option_list:
 
 
 time.sleep(3)
+# выход из браузера
 driver.quit()
